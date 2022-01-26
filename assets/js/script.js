@@ -25,93 +25,52 @@ let dental = [
     { hora: '14:00', especialista: 'RAQUEL VILLASECA', paciente: 'ANA SEPULVEDA', rut: '14441281-0', prevision: 'ISAPRE' },
 ]
 
+var filaRadiologia = "<tr><th>#</th><th>Hora</th><th>Especialista</th><th>Paciente</th><th>RUT</th><th>Prevision</th></tr>";
 
-
-//Tabla Radiologia
-document.write("<section class='container'>");
-document.write("<table class='table'>");
-document.write("<thead class='table-dark'>");
-document.write("<tr>");
-document.write("<th scope='col'>#</th>");
-document.write("<th scope='col' class='text-center'>Hora</th>");
-document.write("<th scope='col' class='text-center'>Especialista</th>");
-document.write("<th scope='col' class='text-center'>Paciente</th>");
-document.write("<th scope='col' class='text-center'>Rut</th>");
-document.write("<th scope='col' class='text-center'>Previsión</th>");
-document.write("</tr>");
-document.write("</thead>");
-
-for (i = 0; i < radiologia.length; i++) {
-    document.write("<tbody>");
-    document.write("<tr>");
-    document.write(`<th scope="col"> ${i+1} </th>`);
-    document.write(`<th scope="col"> ${radiologia[i].hora} </th>`);
-    document.write(`<th scope="col"> ${radiologia[i].especialista} </th>`);
-    document.write(`<th scope="col"> ${radiologia[i].paciente} </th>`);
-    document.write(`<th scope="col"> ${radiologia[i].rut} </th>`);
-    document.write(`<th scope="col"> ${radiologia[i].prevision} </th>`);
-    document.write("</tr>");
+for (var i = 0; i < radiologia.length; i++) {
+    filaRadiologia +=
+        `<tr>
+        <td>${i+1}</td>
+        <td>${radiologia[i].hora}</td>
+        <td>${radiologia[i].especialista}</td>
+        <td>${radiologia[i].paciente}</td>
+        <td>${radiologia[i].rut}</td>
+        <td>${radiologia[i].prevision}</td>
+        </tr>`;
 }
+document.getElementById("tableBodyRd").innerHTML = filaRadiologia;
+document.getElementById("atencionesRd").innerHTML = `Primera atencion: ${radiologia[0].paciente} - ${radiologia[0].prevision} | Última atención: ${radiologia[radiologia.length - 1].paciente} - ${radiologia[radiologia.length - 1].prevision}</p>`;
 
-//Radiologia
-document.write(`<p class='text-center fw-bold pt-5 text-uppercase'>Primera atencion: ${radiologia[0].paciente} - ${radiologia[0].prevision} | Última atención: ${radiologia[radiologia.length - 1].paciente} - ${radiologia[radiologia.length - 1].prevision}</p>`);
 
+var filaTraumatologia = "<tr><th>#</th><th>Hora</th><th>Especialista</th><th>Paciente</th><th>RUT</th><th>Prevision</th></tr>";
 
-//Tabla Traumatología
-document.write("<section class='container'>");
-document.write("<table class='table'>");
-document.write("<thead class='table-dark'>");
-document.write("<tr>");
-document.write("<th scope='col'>#</th>");
-document.write("<th scope='col' class='text-center'>Hora</th>");
-document.write("<th scope='col' class='text-center'>Especialista</th>");
-document.write("<th scope='col' class='text-center'>Paciente</th>");
-document.write("<th scope='col' class='text-center'>Rut</th>");
-document.write("<th scope='col' class='text-center'>Previsión</th>");
-document.write("</tr>");
-document.write("</thead>");
-
-for (i = 0; i < traumatologia.length; i++) {
-    document.write("<tbody>");
-    document.write("<tr>");
-    document.write(`<th scope="col"> ${i+1} </th>`);
-    document.write(`<th scope="col"> ${traumatologia[i].hora} </th>`);
-    document.write(`<th scope="col"> ${traumatologia[i].especialista} </th>`);
-    document.write(`<th scope="col"> ${traumatologia[i].paciente} </th>`);
-    document.write(`<th scope="col"> ${traumatologia[i].rut} </th>`);
-    document.write(`<th scope="col"> ${traumatologia[i].prevision} </th>`);
-    document.write("</tr>");
+for (var i = 0; i < traumatologia.length; i++) {
+    filaTraumatologia +=
+        `<tr>
+        <td>${i+1}</td>
+        <td>${traumatologia[i].hora}</td>
+        <td>${traumatologia[i].especialista}</td>
+        <td>${traumatologia[i].paciente}</td>
+        <td>${traumatologia[i].rut}</td>
+        <td>${traumatologia[i].prevision}</td>
+        </tr>`;
 }
+document.getElementById("tableBodyTr").innerHTML = filaTraumatologia;
+document.getElementById("atencionesTr").innerHTML = `Primera atencion: ${traumatologia[0].paciente} - ${traumatologia[0].prevision} | Última atención: ${traumatologia[traumatologia.length - 1].paciente} - ${traumatologia[traumatologia.length - 1].prevision}</p>`;
 
-//Traumatología
-document.write(`<p class='text-center fw-bold pt-5 text-uppercase'>Primera atencion: ${traumatologia[0].paciente} - ${traumatologia[0].prevision} | Última atención: ${traumatologia[traumatologia.length - 1].paciente} - ${traumatologia[traumatologia.length - 1].prevision}</p>`);
 
+var filaDental = "<tr><th>#</th><th>Hora</th><th>Especialista</th><th>Paciente</th><th>RUT</th><th>Prevision</th></tr>";
 
-//Tabla Dental
-document.write("<section class='container'>");
-document.write("<table class='table'>");
-document.write("<thead class='table-dark'>");
-document.write("<tr>");
-document.write("<th scope='col'>#</th>");
-document.write("<th scope='col' class='text-center'>Hora</th>");
-document.write("<th scope='col' class='text-center'>Especialista</th>");
-document.write("<th scope='col' class='text-center'>Paciente</th>");
-document.write("<th scope='col' class='text-center'>Rut</th>");
-document.write("<th scope='col' class='text-center'>Previsión</th>");
-document.write("</tr>");
-document.write("</thead>");
-
-for (i = 0; i < dental.length; i++) {
-    document.write("<tbody>");
-    document.write("<tr>");
-    document.write(`<th scope="col"> ${i+1} </th>`);
-    document.write(`<th scope="col"> ${dental[i].hora} </th>`);
-    document.write(`<th scope="col"> ${dental[i].especialista} </th>`);
-    document.write(`<th scope="col"> ${dental[i].paciente} </th>`);
-    document.write(`<th scope="col"> ${dental[i].rut} </th>`);
-    document.write(`<th scope="col"> ${dental[i].prevision} </th>`);
-    document.write("</tr>");
+for (var i = 0; i < dental.length; i++) {
+    filaDental +=
+        `<tr>
+        <td>${i+1}</td>
+        <td>${dental[i].hora}</td>
+        <td>${dental[i].especialista}</td>
+        <td>${dental[i].paciente}</td>
+        <td>${dental[i].rut}</td>
+        <td>${dental[i].prevision}</td>
+        </tr>`;
 }
-
-//Dental
-document.write(`<p class='text-center fw-bold pt-5 text-uppercase'>Primera atencion: ${dental[0].paciente} - ${dental[0].prevision} | Última atención: ${dental[dental.length - 1].paciente} - ${dental[dental.length - 1].prevision}</p>`);
+document.getElementById("tableBodyDt").innerHTML = filaDental;
+document.getElementById("atencionesDt").innerHTML = `Primera atencion: ${dental[0].paciente} - ${dental[0].prevision} | Última atención: ${dental[dental.length - 1].paciente} - ${dental[dental.length - 1].prevision}</p>`;
