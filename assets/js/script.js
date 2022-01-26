@@ -1,3 +1,4 @@
+//Declaración Arrays
 let radiologia = [
     { hora: '11:00', especialista: 'IGNACIO SCHULZ', paciente: 'FRANCISCA ROJAS', rut: '9878782-1', prevision: 'FONASA' },
     { hora: '11:30', especialista: 'FEDERICO SUBERCASEAUX', paciente: 'PAMELA ESTRADA', rut: '15234241-3', prevision: 'ISAPRE' },
@@ -25,6 +26,7 @@ let dental = [
     { hora: '14:00', especialista: 'RAQUEL VILLASECA', paciente: 'ANA SEPULVEDA', rut: '14441281-0', prevision: 'ISAPRE' },
 ]
 
+//Tabla Radiología
 var filaRadiologia = "<tr><th>#</th><th>Hora</th><th>Especialista</th><th>Paciente</th><th>RUT</th><th>Prevision</th></tr>";
 
 for (var i = 0; i < radiologia.length; i++) {
@@ -41,7 +43,7 @@ for (var i = 0; i < radiologia.length; i++) {
 document.getElementById("tableBodyRd").innerHTML = filaRadiologia;
 document.getElementById("atencionesRd").innerHTML = `Primera atencion: ${radiologia[0].paciente} - ${radiologia[0].prevision} | Última atención: ${radiologia[radiologia.length - 1].paciente} - ${radiologia[radiologia.length - 1].prevision}</p>`;
 
-
+//Tabla Traumatología
 var filaTraumatologia = "<tr><th>#</th><th>Hora</th><th>Especialista</th><th>Paciente</th><th>RUT</th><th>Prevision</th></tr>";
 
 for (var i = 0; i < traumatologia.length; i++) {
@@ -58,7 +60,7 @@ for (var i = 0; i < traumatologia.length; i++) {
 document.getElementById("tableBodyTr").innerHTML = filaTraumatologia;
 document.getElementById("atencionesTr").innerHTML = `Primera atencion: ${traumatologia[0].paciente} - ${traumatologia[0].prevision} | Última atención: ${traumatologia[traumatologia.length - 1].paciente} - ${traumatologia[traumatologia.length - 1].prevision}</p>`;
 
-
+//Tabla Dental
 var filaDental = "<tr><th>#</th><th>Hora</th><th>Especialista</th><th>Paciente</th><th>RUT</th><th>Prevision</th></tr>";
 
 for (var i = 0; i < dental.length; i++) {
